@@ -1,13 +1,12 @@
 {
-  "name": "react-slingshot",
-  "version": "7.0.1",
-  "description": "Starter kit for creating apps with React and Redux",
+  "name": "canvas-image-viewer",
+  "version": "1.0.0",
+  "description": "Frontend Web App built as a UI for integration with a machine learning image classification backend",
   "engines": {
     "npm": ">=3"
   },
   "scripts": {
     "preinstall": "node tools/nodeVersionCheck.js",
-    "setup": "npm install && node tools/setup/setup.js",
     "start-message": "babel-node tools/startMessage.js",
     "prestart": "npm run start-message",
     "start": "concurrently -k -r -s first \"npm run test:watch\" \"npm run open:src\" \"npm run lint:watch\"",
@@ -27,8 +26,8 @@
     "open:cover": "npm run test:cover && opn ./coverage/lcov-report/index.html",
     "analyze-bundle": "babel-node ./tools/analyzeBundle.js"
   },
-  "author": "Cory House",
-  "license": "MIT",
+  "author": "Jason Wortley",
+  "license": "",
   "dependencies": {
     "connected-react-router": "4.4.1",
     "konva": "2.4.0",
@@ -110,13 +109,11 @@
     "edit",
     "webpack",
     "redux",
-    "flux",
-    "boilerplate",
-    "starter"
+    "flux"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/coryhouse/react-slingshot"
+    "url": "https://github.com/Dynatos/canvas-image-viewer"
   },
   "jest": {
     "moduleNameMapper": {
