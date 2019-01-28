@@ -19,7 +19,7 @@ There is currently no publically available backend for use with this App. This g
 
 ## Installation
 
-0. **See Initial Machine Setup below if you don't have node or git installed, or if you're experiencing issues during the Get Started phase**
+0. **See Initial Machine Setup below if you don't have node or git installed, or if you're experiencing issues during Installation**
 
 1.  **Clone the project**
 
