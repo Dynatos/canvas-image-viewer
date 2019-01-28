@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 export default class ButtonForCanvasActions extends Component {
   
@@ -19,3 +20,8 @@ export default class ButtonForCanvasActions extends Component {
     );
   }
 }
+
+ButtonForCanvasActions.propTypes = {
+  callback: PropTypes.func.isRequired,
+  submitPlaceHolderText: PropTypes.string,
+};

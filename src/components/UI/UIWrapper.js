@@ -17,7 +17,7 @@ export default class UIWrapper extends Component {
   
   // used for default state setup for each image when they are uploaded.
   // this function is handed as props and is used as the callback when an image is uploaded
-  pushUploadedImageDataToState(filePath, imageDOMObject, dimensions, childImageBoxObjects = [[20, 20, 80, 80], [50, 50, 150, 150], [320, 320, 480, 620]]) {
+  pushUploadedImageDataToState(filePath, imageDOMObject, dimensions, childImageBoxCoordinateArray = [[20, 20, 80, 80], [50, 50, 150, 150], [320, 320, 480, 620]]) {
     this.setState({
       menuImages: [
         ...this.state.menuImages,
@@ -27,8 +27,8 @@ export default class UIWrapper extends Component {
           dimensions: dimensions, // x/y dimensions of image, used for sizing canvas
           isDeleted: false, // used to determine if this element should rendered in menu images
           
-          childImageBoxObjects: Array.isArray(childImageBoxObjects) ? childImageBoxObjects : [],
-          // must refuse non array arguments to prevent potential errors
+          childImageBoxCoordinateArray: Array.isArray(childImageBoxCoordinateArray) ? childImageBoxCoordinateArray : [],
+          // refuse non array arguments to prevent potential errors
         }
       ]
     });
@@ -56,7 +56,7 @@ export default class UIWrapper extends Component {
       alert("received empty array or non-array in pushFetchedImageBoxesToState");
     }
     let newState = this.state.menuImages; // mutable version of currentState
-    newState[index].childImageBoxObjects = (Array.isArray(imageBoxes)) ? imageBoxes : [];
+    newState[index].childImageBoxCoordinateArray = (Array.isArray(imageBoxes)) ? imageBoxes : [];
     // ternary statement above to mitigate errors caused by imageBoxes not being an array
     
     this.setState({

@@ -1,8 +1,19 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import ImageInMenu from "./ImageInMenu";
+import ImageMenuItem from "./ImageMenuItem";
+import ImageMenuItemBoxChild from "./ImageMenuItemBoxChild";
 
 export default class ImageMenuWrapper extends Component {
+  
+  createImageMenuChildrenBoxes(childBoxCoordinateArray) {
+  
+    return childBoxCoordinateArray.map((currentArray, index) => {
+      return (
+        <ImageMenuItemBoxChild coordinateArray={currentArray} key={"image-menu-box-item-" + index} />
+      )
+    })
+    
+  }
   
   render() {
     
@@ -16,13 +27,17 @@ export default class ImageMenuWrapper extends Component {
           // <ImageInMenu/> component with properties assigned appropriately
           
           if (!currentObject.isDeleted) {
+            
             return (
-              <ImageInMenu key={'image-menu-item-number-' + index} index={index}
-                           setCurrentCanvasImage={() => { setCurrentCanvasImage(index); }}
-                           currentCanvasImage={currentCanvasImage} deleteImageInMenu={deleteImageInMenu}
+              <ImageMenuItem key={'image-menu-item-number-' + index} index={index}
+                             setCurrentCanvasImage={() => { setCurrentCanvasImage(index); }}
+                             currentCanvasImage={currentCanvasImage} deleteImageInMenu={deleteImageInMenu}
+                             childArray={this.createImageMenuChildrenBoxes(currentObject.childImageBoxCoordinateArray)}
               />
-            );
+            )
+            
           }
+          
         })}
         
       </div>

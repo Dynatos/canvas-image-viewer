@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import Konva from 'konva';
-import { Stage, Layer, Rect, Text, Image } from 'react-konva';
+//import Konva from 'konva';
+import { Stage, Layer, Rect, Image,
+  //Text
+} from 'react-konva';
 
 
 export default class KonvaCanvasWrapper extends Component {
@@ -20,7 +22,7 @@ export default class KonvaCanvasWrapper extends Component {
                      height={currentCanvasImageObject.dimensions.height} x={0} y={0} />
             </Layer>
             <Layer>
-              {currentCanvasImageObject.childImageBoxObjects.map((e, i) => {
+              {currentCanvasImageObject.childImageBoxCoordinateArray.map((e, i) => {
                 return (
                   <Rect
                     key={"menu-image-" + currentCanvasImage + "-box-" + i}

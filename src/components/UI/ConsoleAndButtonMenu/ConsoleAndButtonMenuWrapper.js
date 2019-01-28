@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 //import fetch from 'fetch'; // broke app
 import Console from "./Console";
-import ButtonForCanvasActions from "./ButtonForCanvasActions";
+//import ButtonForCanvasActions from "./ButtonForCanvasActions";
 
 // const dummyData = [
 //   'first text',
@@ -48,7 +48,7 @@ export default class ConsoleAndButtonMenuWrapper extends Component {
       imageDOMObject.onload = () => {
         dimensions.width = imageDOMObject.width;
         dimensions.height = imageDOMObject.height;
-        pushUploadedImageDataToStateCallback(filePath, imageDOMObject, dimensions, /* childImageBoxObjects = [] */);
+        pushUploadedImageDataToStateCallback(filePath, imageDOMObject, dimensions, /* childImageBoxCoordinateArray = [] */);
         // pushes the file path to state for reference when drawing the image on the canvas
       };
       imageDOMObject.src = pictureURL;
@@ -59,7 +59,9 @@ export default class ConsoleAndButtonMenuWrapper extends Component {
 
   render() {
 
-    const { pushUploadedImageDataToState, menuImages, currentCanvasImage } = this.props;
+    const { pushUploadedImageDataToState,
+      //menuImages, currentCanvasImage
+    } = this.props;
 
     return (
       <div className="console-and-button-wrapper">
