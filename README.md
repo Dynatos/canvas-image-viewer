@@ -2,7 +2,7 @@
 
 This is a Frontend UI intended for use with a machine learning image recognition/classification backend. The goal is to allow users to upload images to be classified/tagged (with adjustable sensitivity settings) and to display the results in an interactive environment where corrections can be made to tags and notes can be added. 
 
-####Note:
+##### Note:
 There is currently no publically available backend for use with this App. This github repo only contains the frontend code.
 
 ## TODO
