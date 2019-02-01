@@ -76,7 +76,7 @@ There is currently no publically available backend for use with this App. This g
 
 ## Having Issues? Try these things first
 
-1. Make sure you ran all steps in [Get started](#get-started) including the [initial machine setup](#initial-machine-setup).
+1. Make sure you ran all steps in [Installation](#installation) including the [initial machine setup](#initial-machine-setup).
 2. Run `npm install` - If you forget to do this, you'll see this: `babel-node: command not found`.
 3. Install the latest version of Node. Or install [Node 5.12.0](https://nodejs.org/download/release/v5.12.0/) if you're having issues on Windows. Node 6 has issues on some Windows machines.
 4. Make sure files with names that begin with a dot (.editorconfig, .gitignore, .npmrc) are copied to the project directory root. This is easy to overlook if you copy this repository manually.
