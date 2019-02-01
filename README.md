@@ -9,11 +9,11 @@ There is currently no publically available backend for use with this App. This g
 
 - [x] Implement image upload/render capabilities.
 - [x] Implement Konva and shape-drawing on canvas.
-- [ ] Implement drawn box display/interface inside image render menu.
+- [x] Implement UI for classified image boxes within the render menu.
 - [ ] Implement multiple file uploading capability and drag/drop functionality.
 - [ ] Implement canvas features: click-and-drag, zoom.
-- [ ] Impement console with relevant logging of request statuses and classification information.
-- [ ] Implement Redux, write tests for reducers.
+- [ ] Implement console with relevant logging of request statuses and classification information.
+- [ ] Migrate React state handling to Redux and add tests for Redux reducers.
 - [ ] Create mock Express server for testing requests.
 - [ ] Create boilerplate machine learning backend for users to train and use for classifying.
 
